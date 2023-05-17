@@ -1,0 +1,1 @@
+# ghost-e2e-data
