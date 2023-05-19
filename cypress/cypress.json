@@ -1,0 +1,9 @@
+{
+  "projectId": "ghost-e2e-data",
+  "baseUrl": "http://localhost:3001/",
+  "chromeWebSecurity": false,
+  "integrationFolder": "./cypress/e2e",
+  "pluginsFile": "./cypress/plugins/index.js",
+  "pageLoadTimeout": 20000,
+  "defaultCommandTimeout": 5000
+}
