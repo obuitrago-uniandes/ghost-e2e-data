@@ -36,37 +36,40 @@ class PageSection extends Page {
   get plusButton(){
     return this.driver.$("button[aria-label='Add a card']");
   }
-  get cardHtml() {
-    return this.driver.$("div=Insert a raw HTML card");
+  get cardBookmark() {
+    return this.driver.$("div=Bookmark");
   }
-  get textAreaHtml() {
-    return this.driver.$(".koenig-editor").$('.CodeMirror-code')
-  }
-  get updateDropDown() {
-    return this.driver.$(".view-actions").$("span=Update");
-  }
-  get updateButton() {
-    return this.driver.$(".gh-publishmenu-footer").$("span=Update");
+  get inputBookmark() {
+    return this.driver.$("input[placeholder='Paste URL to add bookmark content...']");
   }
   get settingsButton(){
     return this.driver.$(".view-actions").$("button[title='Settings']");
   }
-  
-  get deleteButton(){
-    return this.driver.$(".settings-menu-delete-button");
+  get textAreaExcerpt() {
+    return this.driver.$(".post-setting-custom-excerpt")
   }
-  get confirmDeleteButton(){
-    return this.driver.$(".modal-footer").$("span=Delete");
+  get textAreaExcerpt() {
+    return this.driver.$(".post-setting-custom-excerpt")
   }
-  get titlePageWeb(){
-    const select = `h1=${this.setTitle()}`
+  get labelExcerpt() {
+    return this.driver.$("label=Excerpt")
+  }
+  get timeInput() {
+    return this.driver.$(".gh-date-time-picker-time input")
+  }
+  get dateInput() {
+    return this.driver.$(".gh-date-time-picker-date input")
+  }
+  get searchAlertUrl(){
+    const select = `span=No provider found for supplied URL.`
     return this.driver.$$(select);
   }
-  get iframeWeb(){
-    return this.driver.$$('iframe');
+  get searhAlertString(){
+    const select = `p=Excerpt cannot be longer than 300 characters.`
+    return this.driver.$$(select);
   }
-  get pageItem(){
-    const select = `h3=${this.setTitle()}`
+  get searhAlertTime(){
+    const select = `div=Must be in format:`
     return this.driver.$$(select);
   }
   get pageItemEdit(){
@@ -78,18 +81,6 @@ class PageSection extends Page {
   }
   createNewPage() {
     this.createButton.click();
-  }
-  setTitle() {
-    return 'This title page'
-  }
-  setHtml(){
-    return '<iframe width="560" height="315" src="https://www.youtube.com/embed/7X8II6J-6mU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-  }
-  setHtmlText(){
-    return '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et sem quis magna viverra rutrum. Vestibulum mollis semper ornare. Vestibulum pharetra metus id posuere consequat. Cras eu mi facilisis ante luctus ornare sed eget justo. Nullam finibus tincidunt ex vel vestibulum. Vestibulum interdum metus id lacus eleifend iaculis. Mauris nec tortor enim. Proin vitae sagittis velit, non iaculis risus. Pellentesque laoreet ipsum sit amet gravida commodo. Integer ipsum turpis, lacinia at egestas eget, rhoncus quis elit. Integer augue ligula, placerat a urna vitae, accumsan bibendum velit. Nunc sapien arcu, efficitur vel tellus ut, maximus venenatis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin quam quam, congue eget pulvinar id, auctor vel ante.Vestibulum sapien neque, aliquet quis feugiat nec, tincidunt sit amet nisi. Etiam eget posuere augue, eget rhoncus quam. Donec maximus faucibus nisl, id suscipit ex blandit et. Etiam id tellus magna. Morbi sollicitudin magna non leo maximus, nec tincidunt mi tempor. Morbi tempus, elit nec laoreet vulputate, turpis lorem fermentum risus, eget mollis quam ligula sed felis. Phasellus mattis dui non volutpat iaculis. Suspendisse eget tortor tortor. Vivamus eget facilisis dolor. Etiam vitae odio feugiat lacus accumsan rhoncus in id arcu. Nunc lacinia congue odio, et semper massa rutrum vel.</p>'
-  }
-  setText(){
-    return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et sem quis magna viverra rutrum. Vestibulum mollis semper ornare. Vestibulum pharetra metus id posuere consequat. Cras eu mi facilisis ante luctus ornare sed eget justo. Nullam finibus tincidunt ex vel vestibulum. Vestibulum interdum metus id lacus eleifend iaculis. Mauris nec tortor enim. Proin vitae sagittis velit, non iaculis risus. Pellentesque laoreet ipsum sit amet gravida commodo. Integer ipsum turpis, lacinia at egestas eget, rhoncus quis elit. Integer augue ligula, placerat a urna vitae, accumsan bibendum velit. Nunc sapien arcu, efficitur vel tellus ut, maximus venenatis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin quam quam, congue eget pulvinar id, auctor vel ante.Vestibulum sapien neque, aliquet quis feugiat nec, tincidunt sit amet nisi. Etiam eget posuere augue, eget rhoncus quam. Donec maximus faucibus nisl, id suscipit ex blandit et. Etiam id tellus magna. Morbi sollicitudin magna non leo maximus, nec tincidunt mi tempor. Morbi tempus, elit nec laoreet vulputate, turpis lorem fermentum risus, eget mollis quam ligula sed felis. Phasellus mattis dui non volutpat iaculis. Suspendisse eget tortor tortor. Vivamus eget facilisis dolor. Etiam vitae odio feugiat lacus accumsan rhoncus in id arcu. Nunc lacinia congue odio, et semper massa rutrum vel.'
   }
 }
 

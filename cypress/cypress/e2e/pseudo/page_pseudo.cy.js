@@ -208,7 +208,7 @@ context("Navigation", () => {
     pageManage.timeInput(data.field_invalid);
     //And I click in form settings
     pageManage.settingsForm();
-    //And I see that the alert string large is liked in list page
+    //And I see that the alert time large is liked in list page
     pageManage.searhAlertTime();
     cy.wait(1000);
     cy.go(-1);
