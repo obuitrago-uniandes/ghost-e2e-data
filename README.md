@@ -10,11 +10,7 @@
 ## Funcionalidades bajo prueba
 | Funcionalidad |
 | -- |
-| Configuración General (Título y descripción de la página) |
-| Diseño (Administración de ítems de navegación) |
-| Creación Tag |
-| Administración de Post (CRUD) |
-| Administración de Páginas (CRUD) |
+| Configuración General |
 
 ## Funcionalidades y estratégias
 
@@ -28,7 +24,7 @@
 
 ### Schema 1
 
-
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/bbf544e1-4b4c-40d1-b804-a7fea88ccd19)
 
 ## Pasos para ejecutar Cypress
 
