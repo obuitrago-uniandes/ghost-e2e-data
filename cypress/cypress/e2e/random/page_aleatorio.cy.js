@@ -20,7 +20,7 @@ context("Navigation", () => {
     });
   });
 
-  it("Scenario Publicar pagina con titulo  y texto contenido validos", () => {
+  it("Scenario Ingresar titulo  y texto contenido validos", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page
@@ -45,7 +45,7 @@ context("Navigation", () => {
     pageManage.searchPublished("Published", 1);
   });
 
-  it("Scenario Publicar pagina con titulo largo y contenidos valido", () => {
+  it("Scenario Ingresar titulo largo y contenidos valido", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page
@@ -76,7 +76,7 @@ context("Navigation", () => {
   }); 
   
   
-  it("Scenario Publicar pagina con titulo valido y url bookmark invalido", () => {
+  it("Scenario Ingresar titulo valido y url bookmark invalido", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page
@@ -111,7 +111,7 @@ context("Navigation", () => {
    
   });
 
-  it("Scenario Publicar pagina con titulo valido y Excerpt large", () => {
+  it("Scenario Ingresar titulo valido y Excerpt large", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page
@@ -142,7 +142,7 @@ context("Navigation", () => {
     pageManage.leaveButton();
   }); 
 
-  it("Scenario Publicar pagina con titulo valido y time invalido", () => {
+  it("Scenario Ingresar titulo valido y time invalido", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page
@@ -171,7 +171,7 @@ context("Navigation", () => {
     cy.go(-1);
   }); 
 
-  it("Scenario Publicar pagina con titulo valido y metatitle invalido ", () => {
+  it("Scenario Ingresar titulo valido y metatitle invalido ", () => {
     //When I go section pages
     adminPage.clickPageBtn();
     //And Igo to Create Page

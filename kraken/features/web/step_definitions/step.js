@@ -28,16 +28,31 @@ When("I go to Create Page", async function () {
 });
 
 When("I enter title page", async function () {
-  return await this.pageSection.titlePage.setValue(this.data.title);
+  return await this.pageSection.titlePage.setValue(this.data_pseudo_page.title);
+});
+When("I enter title page ap", async function () {
+  return await this.pageSection.titlePage.setValue(this.data_apriori_page[this.index].title);
+});
+When("I enter title page fk", async function () {
+  return await this.pageSection.titlePage.setValue(this.faker.lorem.word());
 });
 When("I enter title large page", async function () {
-  return await this.pageSection.titlePage.setValue(this.data.title_large);
+  return await this.pageSection.titlePage.setValue(this.data_pseudo_page.title_large);
+});
+When("I enter title large page ap", async function () {
+  return await this.pageSection.titlePage.setValue(this.data_apriori_page[this.index].title_large);
 });
 When("I click on content", async function () {
   return await this.pageSection.contentPage.click();
 });
 When("I enter content", async function () {
-  return await this.pageSection.contentPage.setValue(this.data.content);
+  return await this.pageSection.contentPage.setValue(this.data_pseudo_page.content);
+});
+When("I enter content ap", async function () {
+  return await this.pageSection.contentPage.setValue(this.data_apriori_page[this.index].content);
+});
+When("I enter content fk", async function () {
+  return await this.pageSection.contentPage.setValue(this.faker.lorem.words({min:5, max:10}));
 });
 When("I click on publish", async function () {
   return await this.pageSection.publishButton.click();
@@ -57,22 +72,49 @@ When("I select bookmark option", async function () {
   return await this.pageSection.cardBookmark.click();
 });
 When("I enter url invalid", async function () {
-  return await this.pageSection.inputBookmark.setValue(this.data.field_invalid);
+  return await this.pageSection.inputBookmark.setValue(this.data_pseudo_page.field_invalid);
+});
+When("I enter url invalid ap", async function () {
+  return await this.pageSection.inputBookmark.setValue(this.data_apriori_page[this.index].field_invalid);
+});
+When("I enter url invalid fk", async function () {
+  return await this.pageSection.inputBookmark.setValue(this.faker.lorem.word());
 });
 When("I enter url valid", async function () {
-  return await this.pageSection.inputBookmark.setValue(this.data.url);
+  return await this.pageSection.inputBookmark.setValue(this.data_pseudo_page.url);
+});
+When("I enter url valid ap", async function () {
+  return await this.pageSection.inputBookmark.setValue(this.data_apriori_page[this.index].url);
 });
 When("I enter text area Excerpt", async function () {
-  return await this.pageSection.textAreaExcerpt.setValue(this.data.field_large);
+  return await this.pageSection.textAreaExcerpt.setValue(this.data_pseudo_page.field_large);
+});
+When("I enter text area Excerpt ap", async function () {
+  return await this.pageSection.textAreaExcerpt.setValue(this.data_apriori_page[this.index].field_large);
+});
+When("I enter text area Excerpt fk", async function () {
+  return await this.pageSection.textAreaExcerpt.setValue(this.faker.lorem.words({min:50, max:80}));
 });
 When("I enter time invalid", async function () {
-  return await this.pageSection.timeInput.setValue(this.data.field_invalid);
+  return await this.pageSection.timeInput.setValue(this.data_pseudo_page.field_invalid);
+});
+When("I enter time invalid ap", async function () {
+  return await this.pageSection.timeInput.setValue(this.data_apriori_page[this.index].field_invalid);
+});
+When("I enter time invalid fk", async function () {
+  return await this.pageSection.timeInput.setValue(this.faker.lorem.word());
 });
 When("I click in form labelExcerpt", async function () {
   return await this.pageSection.labelExcerpt.click();
 });
 When("I enter date invalid", async function () {
-  return await this.pageSection.dateInput.setValue(this.data.field_invalid);
+  return await this.pageSection.dateInput.setValue(this.data_pseudo_page.field_invalid);
+});
+When("I enter date invalid ap", async function () {
+  return await this.pageSection.dateInput.setValue(this.data_apriori_page[this.index].field_invalid);
+});
+When("I enter date invalid fk", async function () {
+  return await this.pageSection.dateInput.setValue(this.faker.lorem.word());
 });
 Then('I see that the  alert url is liked in  page', async function () {
   let elements = await this.pageSection.searchAlertUrl

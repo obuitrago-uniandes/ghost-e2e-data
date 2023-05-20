@@ -2,7 +2,7 @@ Feature: Creación y edición de páginas
 
 
   @user1 @web
-  Scenario: Scenario Publicar pagina con titulo  y texto contenido validos 
+  Scenario: Publicar pagina con titulo  y texto contenido validos 
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
@@ -25,7 +25,7 @@ Feature: Creación y edición de páginas
   And I go to back page list
 
  @user2 @web
-  Scenario: Scenario Publicar pagina con titulo largo y contenidos valido
+  Scenario: Ingresar titulo largo y contenidos valido
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
@@ -48,7 +48,7 @@ Feature: Creación y edición de páginas
   And I go to back page list
   
   @user3 @web
-  Scenario: Scenario Publicar pagina con titulo valido y url bookmark invalido
+  Scenario: Ingresar  titulo valido y url bookmark invalido
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
@@ -80,7 +80,7 @@ Feature: Creación y edición de páginas
   
   
   @user4 @web
-  Scenario: Publicar pagina con titulo valido y Excerpt large
+  Scenario: Ingresar titulo valido y Excerpt large
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
@@ -105,7 +105,7 @@ Feature: Creación y edición de páginas
   And I wait for 1 seconds
   
   @user5 @web
-  Scenario: Publicar pagina con titulo valido y time invalido
+  Scenario: Ingresar titulo valido y time invalido
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
@@ -127,7 +127,7 @@ Feature: Creación y edición de páginas
   And I click in form labelExcerpt
 
   @user6 @web
-  Scenario: Publicar pagina con titulo valido y date invalido
+  Scenario: Ingresar titulo valido y date invalido
   Given I navigate to page "http://localhost:3001/ghost/#/signin"
   When I enter email "<USER>"
   And I enter password "<PASSWORD>"
