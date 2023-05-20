@@ -1,0 +1,19 @@
+{
+  "name": "e2eghost-kraken",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "kraken-node": "^1.0.24"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^6.0.7"
+  },
+  "description": ""
+}
