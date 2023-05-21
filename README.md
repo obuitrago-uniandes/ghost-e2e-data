@@ -38,11 +38,15 @@ Se ejecutaron un total de xx escenarios de los cuales se detectaron yy errores r
 
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/f3c8eae9-7825-461d-933a-0847cd1a18d1)
 
+https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/c2a5103b-360c-48a2-ad5c-e9931f40039d
+
 Las pruebas fueron todas satisfactorias
 
 ### Configuración General (Escenario aleatorio)
 
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/0e816692-738e-4752-b71e-cda318a15bb9)
+
+https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/c14f0e8d-7934-427d-b215-dab7a6cbf6c8
 
 Todas las pruebas fueron satisfactorias.
 
