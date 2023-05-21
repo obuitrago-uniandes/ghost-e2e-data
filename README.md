@@ -26,6 +26,26 @@
 
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/bbf544e1-4b4c-40d1-b804-a7fea88ccd19)
 
+## Resultados
+
+### Configuración General (Pool de datos a priori)
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/491e5a0e-dedb-4e1d-8791-a84e96b9dbd7)
+
+Se ejecutaron un total de xx escenarios de los cuales se detectaron yy errores relacionados a guardar texto `"entre comillas"` y la palabra `null` en cada uno de los campos de entrada, además se ejecutaron pruebas para detectar posibles XSS y funcionamiento con diferentes caracteres (hasta emoji).
+
+### Configuración General (Pool de datos (pseudo) aleatorio dinámico)
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/f3c8eae9-7825-461d-933a-0847cd1a18d1)
+
+Las pruebas fueron todas satisfactorias
+
+### Configuración General (Escenario aleatorio)
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/0e816692-738e-4752-b71e-cda318a15bb9)
+
+Todas las pruebas fueron satisfactorias.
+
 ## Pasos para ejecutar Cypress
 
 Las instrucciones para ejecutar cypress se encuentran en [En el siguiente enlace](https://github.com/obuitrago-uniandes/ghost-e2e-data/tree/main/cypress)
