@@ -41,6 +41,8 @@
 
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/124005780/491e5a0e-dedb-4e1d-8791-a84e96b9dbd7) 
 
+[Video de prueba](https://uniandes-my.sharepoint.com/:v:/g/personal/o_buitragov_uniandes_edu_co/EXRRdK4PPS5JnU5R_GLM7lQBSTlTRPHSTayrBE1n5FROsg?e=xbcZGo)
+
 Se ejecutaron un total de xx escenarios de los cuales se detectaron yy errores relacionados a guardar texto `"entre comillas"` y la palabra `null` en cada uno de los campos de entrada, además se ejecutaron pruebas para detectar posibles XSS y funcionamiento con diferentes caracteres (hasta emoji).
 
 ### Configuración General (Pool de datos a priori) Gestión de páginas
