@@ -1,7 +1,7 @@
 const loginPage = require("../../page/login.page");
 const adminPage = require("../../page/admin.page");
 const tagManage = require("../../page/tag.manage");
-const poolData = require("../../../../mock/pseudo/api.mock");
+const poolData = require("../../../../mock/pseudo/tag-post.mock");
 
 
 /// <reference types="cypress" />
@@ -10,9 +10,9 @@ context("Navigation", () => {
   let data;
   beforeEach(() => {
     cy.fixture("ghost.json").as("ghostData");
-    cy.get("@ghostData").then((ghostData) => {
+    cy.get("@ghostData").then(() => {
       (async function () {
-        data = await poolData.getData(Math.floor(Math.random() * 100), ghostData.key );  
+        data = await poolData.getData(Math.floor(Math.random() * 100) );
       })()
     });
     cy.wait(3000);
@@ -34,7 +34,7 @@ context("Navigation", () => {
     //And I go to Create Tag
     tagManage.createNewButton();
     //And I enter description
-    tagManage.fillDescripcionTag(data.content+data.content);
+    tagManage.fillDescripcionTag(data.description);
     //And I click save tag
     cy.wait(5000);
     tagManage.saveTag();
@@ -53,9 +53,9 @@ context("Navigation", () => {
     tagManage.createNewButton();
     cy.wait(1000);
     //And I enter name
-    tagManage.fillNameTag(data.title+''+data.title);
+    tagManage.fillNameTag(data.description);
     //And I enter description
-    tagManage.fillDescripcionTag(data.content);
+    tagManage.fillDescripcionTag(data.description);
     //And I click save tag
     cy.wait(5000);
     tagManage.saveTag();
@@ -72,12 +72,12 @@ context("Navigation", () => {
     //And I go to Create Tag
     tagManage.createNewButton();
     //And I enter name
-    tagManage.fillNameTag(data.title);
+    tagManage.fillNameTag(data.name);
     //And I enter description
-    tagManage.fillDescripcionTag(data.content);
+    tagManage.fillDescripcionTag(data.description);
     //And I enter color
     cy.wait(1000);
-    tagManage.fillColorTag(data.title);
+    tagManage.fillColorTag(data.color_incorrecto);
     //And I click save tag
     cy.wait(1000);
     tagManage.saveTag();
@@ -97,9 +97,10 @@ context("Navigation", () => {
     let name= data.name;
     tagManage.fillNameTag(name);
     //And I enter description
-    tagManage.fillDescripcionTag(data.content);
+    tagManage.fillDescripcionTag(data.description);
     cy.wait(1000);
     //And I enter color
+    tagManage.fillColorTag(data.color.replace('#',''));
     //And I click save tag
     cy.wait(1000);
     tagManage.saveTag();
@@ -118,15 +119,15 @@ context("Navigation", () => {
     //And I go to Create Tag
     tagManage.createNewButton();
     //And I enter name
-    tagManage.fillNameTag(data.title);
+    tagManage.fillNameTag(data.name);
     //And I enter description
-    tagManage.fillDescripcionTag(data.content);
+    tagManage.fillDescripcionTag(data.description);
     //And I click save tag
     cy.wait(1000);
     tagManage.saveTag();
 
     tagManage.clicExpandMetadata();
-    tagManage.fillNameMetadataTag(data.title+' - '+data.title);
+    tagManage.fillNameMetadataTag(data.metadataTitle+' - '+data.metadataTitle);
     tagManage.clickDescriptionMetadata();
     //I expect have the max characters error
     cy.wait(1000);
@@ -141,15 +142,15 @@ context("Navigation", () => {
     //And I go to Create Tag
     tagManage.createNewButton();
     //And I enter name
-    tagManage.fillNameTag(data.title);
+    tagManage.fillNameTag(data.name);
     //And I enter description
-    tagManage.fillDescripcionTag(data.content);
+    tagManage.fillDescripcionTag(data.description);
     //And I click save tag
     cy.wait(1000);
     tagManage.saveTag();
     
     tagManage.clicExpandMetadata();
-    tagManage.fillDescriptionMetadataTag(data.meta_title_large);
+    tagManage.fillDescriptionMetadataTag(data.metadataTitle+' '+data.metadataTitle);
     tagManage.clickNameMetadata();
     //I expect have the max characters error
     cy.wait(1000);

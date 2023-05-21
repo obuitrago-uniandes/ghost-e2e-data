@@ -1,7 +1,7 @@
 const loginPage = require("../../page/login.page");
 const adminPage = require("../../page/admin.page");
 const postManage = require("../../page/post.manage");
-const poolData = require("../../../../mock/pseudo/api.mock");
+const poolData = require("../../../../mock/pseudo/tag-post.mock");
 
 /// <reference types="cypress" />
 
@@ -9,9 +9,9 @@ context("Navigation", () => {
   let data;
   beforeEach(() => {
     cy.fixture("ghost.json").as("ghostData");
-    cy.get("@ghostData").then((ghostData) => {
+    cy.get("@ghostData").then(() => {
       (async function () {
-        data = await poolData.getData(Math.floor(Math.random() * 100), ghostData.key );  
+        data = await poolData.getData(Math.floor(Math.random() * 100) );
       })()
     });
     cy.wait(3000);
@@ -40,9 +40,9 @@ context("Navigation", () => {
     cy.wait(1000);
     adminPage.clickPostBtn();
     postManage.editPost('(Untitled)');
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I enter contet
-    postManage.fillContent(data.content);
+    postManage.fillContent(data.description);
     //And I click publish 
     postManage.btnPublish()
     //And I click confirm publish 
@@ -54,7 +54,7 @@ context("Navigation", () => {
     cy.wait(1000);
   })
 
-  it('Scenario: Editar post y Publicar', () => { 
+  it('Scenario: Valida Longitud de Titulo', () => { 
     //When I go section Post
     adminPage.clickPostBtn();
     //And Igo to Create Post
@@ -71,7 +71,7 @@ context("Navigation", () => {
     //And I enter title    
     postManage.fillTitle(data.title_large);
     //And I enter contet
-    postManage.fillContent(data.content);
+    postManage.fillContent(data.description);
     //And I click publish 
     postManage.btnPublish()
     //And I click confirm publish 
@@ -96,13 +96,13 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     //And click on settings button
     postManage.seeSettings();
     //And I enter text time
-    postManage.timeInput(data.field_invalid);
+    postManage.timeInput(data.time_invalid);
     //And I click in form settings
     postManage.settingsForm();
     //And I see that the alert string large is liked in list page
@@ -127,7 +127,7 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     //And click on plus button
@@ -135,7 +135,7 @@ context("Navigation", () => {
     //And I select bookmark
     postManage.cardBookmark();
     //And I enter Bookmark
-    postManage.inputBookmark(data.field_invalid);
+    postManage.inputBookmark(data.time_invalid);
     //And I clik in content
     postManage.contentPost();
     //And I see that the  alert url is liked in  page
@@ -164,12 +164,12 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     postManage.seeSettings();
     postManage.metadataSettingPost()
-    postManage.fillNameMetadataTag(data.content)
+    postManage.fillNameMetadataTag(data.title_large)
     postManage.clickDescriptionMetadata()
     postManage.lenghtErrorNameMeta()
     
@@ -190,13 +190,13 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     postManage.seeSettings();
     postManage.metadataSettingPost()
-    postManage.fillDescriptionMetadataTag(data.content+' '+data.content)
-    postManage.fillNameMetadataTag(data.title)
+    postManage.fillDescriptionMetadataTag(data.description+' '+data.description)
+    postManage.fillNameMetadataTag(data.metadataTitle)
     postManage.lenghtErrorDescriptionMeta()
     
   });
@@ -217,14 +217,14 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     postManage.seeSettings();
     postManage.metadataSettingPost()
-    postManage.fillDescriptionMetadataTag(data.content)
-    postManage.fillNameMetadataTag(data.title)
-    postManage.fillURLMetadataTag(data.title)
+    postManage.fillDescriptionMetadataTag(data.description)
+    postManage.fillNameMetadataTag(data.metadataTitle)
+    postManage.fillURLMetadataTag(data.metadataTitle)
     postManage.clickDescriptionMetadata();
     postManage.lenghtErrorURLMeta()
     
@@ -247,13 +247,13 @@ context("Navigation", () => {
     //And I select draft Post
     postManage.editPost("(Untitled)");
     //And I enter title
-    postManage.fillTitle(data.title);
+    postManage.fillTitle(data.name);
     //And I click  content
     postManage.contentPost();
     postManage.seeSettings();
     postManage.metadataSettingPost()
-    postManage.fillDescriptionMetadataTag(data.title)
-    postManage.fillNameMetadataTag(data.title)
+    postManage.fillDescriptionMetadataTag(data.description)
+    postManage.fillNameMetadataTag(data.metadataTitle)
     postManage.fillURLMetadataTag(data.url)
     postManage.clickDescriptionMetadata();    
   });

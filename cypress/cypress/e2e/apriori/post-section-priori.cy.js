@@ -1,7 +1,7 @@
 const loginPage = require("../../page/login.page");
 const adminPage = require("../../page/admin.page");
 const postManage = require("../../page/post.manage");
-const poolData = require("../../../../mock/apriori/page.json");
+const poolData = require("../../../../mock/apriori/post.json");
 
 /// <reference types="cypress" />
 
