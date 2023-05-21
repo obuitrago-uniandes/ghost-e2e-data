@@ -68,16 +68,15 @@ Se ejecutaron un total de xx escenarios de los cuales se detectaron yy errores r
 
 ### Creación Tag (Pool de datos a priori) 
 
-![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/a208e50a-3caf-4122-b6f0-2e8976ac5a68)
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/fd851aa1-85a6-4e7b-9093-6ebff4a5609d)
 
-[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/ER6w8XwziiBDhQJtIAWwfKwBYT600yxR6kGmO0UY72yvjg?e=4raVsj)
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/EalTKAuptiROld3mXQAW8N0B4_yv8AZanKyhm7RXfl0tDg?e=5L4uyN)
 
 
 ### Gestión Post (Pool de datos a priori) 
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/f2331281-5781-42dc-a6d9-d1d0ca5b8765)
 
-![image]()
-
-[Video pruebas]()
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/EZhgeJrX_WlGhP5_doTu5IIBYgbhFCnPcdyv08udLQP-WA?e=ZwMh0V)
 
 
 ### Configuración General (Pool de datos (pseudo) aleatorio dinámico)
@@ -93,6 +92,20 @@ Las pruebas fueron todas satisfactorias
 ![Captura desde 2023-05-20 21-16-11](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123990169/a14a7db6-ab26-4ee8-9280-1f979c0708d7)
 
 [Video prueba](https://uniandes-my.sharepoint.com/:v:/g/personal/w_cuadrosr_uniandes_edu_co/EfPB-Z-aFghMqjBlnHw4XrsBlc9oDESUqI4M9S64WQuRmA?e=SEQ59W)
+
+
+### Creación Tag (Pool de datos (pseudo) aleatorio dinámico) 
+
+![image]()
+
+[Video pruebas]()
+
+
+### Gestión Post (Pool de datos (pseudo) aleatorio dinámico) 
+![image]()
+
+[Video pruebas]()
+
 
 ### Configuración General (Escenario aleatorio)
 
@@ -111,6 +124,20 @@ Todas las pruebas fueron satisfactorias.
 Para el caso de Kraken se llevaron a cabo 20 escenarios 7 escenarios con la estrategia apriori, 7 con la estrategia pseudo aletorio y 6 con la estrategia aleatorio
 
 ![Captura desde 2023-05-20 22-44-35](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123990169/505c75b5-0c0c-47e7-b8bf-83770e7e8b2b)
+
+
+### Creación Tag  (Escenario aleatorio)
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/e6a2f755-db49-4ed9-9809-0fbfd0b3bf45)
+
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/EaDg93MGXthKj_LTZrCmDC0Bg3cwhBAcxBei8Qd0u2Q9Aw?e=lLKe4Q)
+
+
+### Gestión Post  (Escenario aleatorio) 
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/7f7526a8-1b15-403c-80e0-b712b0402d94)
+
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/Eb5cUsNhtaNHvGyiazRb7uMBpzUps5bUkv-eX4vBvCNdmg?e=KqNBVx)
+
 
 
 ## Pasos para ejecutar Cypress
