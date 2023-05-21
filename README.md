@@ -96,15 +96,16 @@ Las pruebas fueron todas satisfactorias
 
 ### Creación Tag (Pool de datos (pseudo) aleatorio dinámico) 
 
-![image]()
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/18027ff4-52f8-4f35-93ba-fd6d40ceb64e)
 
-[Video pruebas]()
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/ETnaD0szkElFnhdb-UQt7m4BhpzydVsMaSLU8hpRvrTaxw?e=higpDQ)
 
 
 ### Gestión Post (Pool de datos (pseudo) aleatorio dinámico) 
-![image]()
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/baac30b2-ce43-48ed-8c74-5513b4beb7eb)
 
-[Video pruebas]()
+
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/EREr859Rn5pMk4UI7yUKCC4BMErd_xlQ2Tu37GJO1FBQqg?e=de88Jx)
 
 
 ### Configuración General (Escenario aleatorio)
