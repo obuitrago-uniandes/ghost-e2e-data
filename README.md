@@ -11,6 +11,9 @@
 | Funcionalidad |
 | -- |
 | Configuración General |
+| Tag |
+| Post |
+| Page |
 
 ## Funcionalidades y estratégias
 
@@ -22,6 +25,9 @@
 | Gestión páginas | Cypress  y Kraken | Pool de datos a-priori | `./cypress/cypress/e2e/apriori/page_priori.cy.js` `./kraken/features/list-features/apriori/page_section_apriori.feature` | Se agrega una base de datos en formato json la cual fue generada desde la herramienta de [mockaroo](https://mockaroo.com/)  directamente en una carpeta independiente llamada Mock, desde allí se utilizan los datos precargados para llenar los campos requeridos en cada escenario Para ambas herramientas Kraken y Cypress se implementaron 6 escenarios en cada una |
 | Gestión páginas  | Cypress y kraken | Pool de datos (pseudo) aleatorio dinámico | `./cypress/cypress/e2e/pseudo/page_pseudo.cy.js` `./kraken/features/list-features/pseudo/page_section_pseudo.feature`  | Mediante [mockaroo](https://mockaroo.com/) se genera una Api, a partir de un schema (ver shema 2) configurado para la generación de datos, luego se ajusta la url de la API para que esta genere un solo grupo de datos cuando sea consultada, después de esto se crea un archivo en la carpeta `mock/pseudo/api.mock.js` el cual ejecuta el consumo del api por medio de una función, luego en el before de la prueba se invoca esta función y trae un grupo de datos para cada escenario. Para ambas herramientas Kraken y Cypress se implementaron 7 escenarios en cada una |
 | Gestión páginas | Cypress y Kraken | Escenario aleatorio | `./cypress/cypress/e2e/random/page_aleatorio.cy.js` `./kraken/features/list-features/aleatorio/page_section_aleatorio.feature` | Haciendo uso de [Faker](https://fakerjs.dev/), se generan los datos para llenar cada uno de los campos requeridos en los escenarios. Para ambas herramientas Kraken y Cypress se implementaron 6 escenarios en cada una|
+| Creación Tag y Gestión Post | Cypress | Pool de datos a-priori | `./cypress/cypress/e2e/apriori/tag-section-priori.cy.js` `./cypress/cypress/e2e/apriori/post-section-priori.cy.js` | Se agrega una base de datos en formato json la cual fue generada desde la herramienta de [mockaroo](https://mockaroo.com/)  directamente en una carpeta independiente llamada Mock, desde allí se utilizan los datos precargados para llenar los campos requeridos en cada escenario, para estas funcionalidades se implementaron 8 escenarios para post y 6 escenarios para Tag |
+| Creación Tag y Gestión Post   | Cypress | Pool de datos (pseudo) aleatorio dinámico | `./cypress/cypress/e2e/pseudo/tag-section-pseudo.cy.js` `./cypress/cypress/e2e/pseudo/post-section-pseudo.cy.j`  | Mediante [mockaroo](https://mockaroo.com/) se genera una Api, a partir de un schema (ver shema 3) configurado para la generación de datos, luego se ajusta la url de la API para que esta genere un solo grupo de datos cuando sea consultada, después de esto se crea un archivo en la carpeta `mock/pseudo/tag.mock.js` el cual ejecuta el consumo del api por medio de una función, luego en el before de la prueba se invoca esta función y trae un grupo de datos para cada escenario, para estas funcionalidades se implementaron 8 escenarios para post y 6 escenarios para Tag  |
+| Creación Tag y Gestión Post  | Cypress | Escenario aleatorio | `./cypress/cypress/e2e/random/tag-section-aleatorio.cy.js` `./cypress/cypress/e2e/random/post-section-aleatorio.cy.js` | Haciendo uso de [Faker](https://fakerjs.dev/), se generan los datos para llenar cada uno de los campos requeridos en los escenarios, para estas funcionalidades se implementaron 8 escenarios para post y 6 escenarios para Tag |
 
 ## Imágenes de Schemas usados
 
@@ -33,6 +39,14 @@
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123990169/faa5516f-4280-4550-916f-0675d6bf83e4)
 ### Configuración Api Mockaroo para funcionalidad gestión de páginas
 ![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123990169/45cf229d-098c-4de7-9fd8-9fcab05434f1)
+
+### Schema 3
+## Tag
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/4d9b7cf2-584e-4763-aaba-3ad82c12b40f)
+
+## Post
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/852d75b7-9ccf-4a2f-aefc-466aad5b81af)
 
 
 ## Resultados
@@ -50,6 +64,21 @@ Se ejecutaron un total de xx escenarios de los cuales se detectaron yy errores r
 ![Captura desde 2023-05-20 20-50-55](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123990169/ab86ec68-57ec-4238-ab98-fee4d001df3a) 
 
 [Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/w_cuadrosr_uniandes_edu_co/EZvoUwwOkZxFmocsqnY59P8BECIeQDTCOGrf0dVKkRxGkQ?e=8d1nhl)
+
+
+### Creación Tag (Pool de datos a priori) 
+
+![image](https://github.com/obuitrago-uniandes/ghost-e2e-data/assets/123474214/a208e50a-3caf-4122-b6f0-2e8976ac5a68)
+
+[Video pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/ma_ninog12_uniandes_edu_co/ER6w8XwziiBDhQJtIAWwfKwBYT600yxR6kGmO0UY72yvjg?e=4raVsj)
+
+
+### Gestión Post (Pool de datos a priori) 
+
+![image]()
+
+[Video pruebas]()
+
 
 ### Configuración General (Pool de datos (pseudo) aleatorio dinámico)
 
